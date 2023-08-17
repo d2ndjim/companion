@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/navbar";
-// import { Sidebar } from "@/components/sidebar";
+import { Sidebar } from "@/components/sidebar";
 // import { checkSubscription } from "@/lib/subscription";
 
 const RootLayout = async ({
@@ -14,7 +14,7 @@ const RootLayout = async ({
       {/* <Navbar isPro={isPro} /> */}
       <Navbar />
       <div className="hidden md:flex mt-16 h-full w-20 flex-col fixed inset-y-0">
-        {/* <Sidebar  /> */}
+        <Sidebar  />
         {/* <Sidebar isPro={isPro} /> */}
       </div>
       <main className="md:pl-20 pt-16 h-full">

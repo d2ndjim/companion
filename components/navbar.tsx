@@ -6,7 +6,7 @@ import { Poppins } from "next/font/google";
 import { Sparkles } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-// import { MobileSidebar } from "@/components/mobile-sidebar";
+import { MobileSidebar } from "@/components/mobile-sidebar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { useProModal } from "@/hooks/use-pro-modal";
@@ -16,15 +16,18 @@ const font = Poppins({ weight: "600", subsets: ["latin"] });
 //   isPro: boolean;
 // }
 
-export const Navbar = ({
-  // isPro
-}) => {
+export const Navbar = (
+  {
+    // isPro
+  },
+) => {
   const proModal = useProModal();
 
   return (
     <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 h-16 border-b border-primary/10 bg-secondary">
       <div className="flex items-center">
         {/* <MobileSidebar isPro={isPro} /> */}
+        <MobileSidebar />
         <Link href="/">
           <h1
             className={cn(
@@ -52,4 +55,4 @@ export const Navbar = ({
       </div>
     </div>
   );
-}
+};
